@@ -1,0 +1,10 @@
+.content {
+  margin-top: 70px;
+}
+.card-image {
+  width: 100%;
+}
+
+:global(.nav-link.active) {
+  color: #18BC9C !important;
+}
