@@ -22,8 +22,8 @@ const cssLoader = () => {
     loader: 'css-loader',
     options: {
       modules: true,
-      localIdentName: 'ninhdeptrai.com-[hash:base64:8]',
-      minimize: DEV ? false : { discardComments: { removeAll: true } }
+      localIdentName: 'ninhdeptrai.com-[hash:base64:8]'
+      // minimize: DEV ? false : { discardComments: { removeAll: true } }
     }
   };
 
