@@ -60,12 +60,16 @@ const options = {
       'process.env.PUBLIC_PATH': JSON.stringify(env.PUBLIC_PATH)
     })
   ],
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
 
   devtool: DEV ? 'cheap-module-eval-source-map' : undefined,
   optimization: optimization(),
   devServer: {
-    // Disable due to React Hooks compatible
-    // hot: true
+    hot: true
   }
 };
 
@@ -90,7 +94,8 @@ function fontsLoaders() {
     {
       test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
       use: assets
-    }];
+    }
+  ];
 }
 
 function optimization() {
@@ -115,6 +120,5 @@ function optimization() {
     ]
   };
 }
-
 
 module.exports = options;

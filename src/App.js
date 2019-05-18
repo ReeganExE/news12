@@ -1,7 +1,5 @@
 import React from 'react';
-
-// react-hot-loader is not compatible with react hooks at this moment
-// import { hot } from 'react-hot-loader';
+import { hot } from 'react-hot-loader/root';
 
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -39,5 +37,4 @@ function App() {
   );
 }
 
-export default App;
-// export default hot(module)(App);
+export default hot(App);
