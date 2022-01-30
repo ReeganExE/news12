@@ -2,6 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-up';
 
 import style from './style.css'; // eslint-disable-line no-unused-vars
 import News from './News';
@@ -32,6 +33,9 @@ function App() {
             </div>
           </div>
         </div>
+        <ScrollToTop showUnder={160}>
+          <span styleName="style.up" />
+        </ScrollToTop>
       </PostContext.Provider>
     </Router>
   );
